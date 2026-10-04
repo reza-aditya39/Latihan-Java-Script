@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Internal</title>
+  
+</head>
+<body>
+    <!-- Judul -->
+    <h1>Tugas 1</h1>
+    <!-- membuat garis pembatas -->
+    <hr>
+
+    <script>
+        //menentukan nilai awal dari panjang dan lebar persegi panjang
+        let P= 3;
+        let L= 9;
+
+        // Judul Luas
+       document.write ( "<h3>Luas Persegi Panjang</h3><br><br>");
+
+        //Memanggil fungsi P dan L yang telah ditentukan
+       document.write ( "Diketahui Panjang persegi panjang " + P + "cm <br>");
+       document.write ( "Dan Lebar persegi panjang " + L + "cm<br>");
+
+       //Menghitung Luas Persegi Panjang
+       document.write ( "Maka Luas dari bangun tersebut adalah " + (P*L) + "cm<br><br>");
+
+
+    // menentukan nilai awal dari sisi persegi atau bujur sangkar
+       let S= 9;
+
+       // Judul Luas
+       document.write ( "<h3>Luas Persegi</h3><br><br>");
+
+       // Memanggil fungsi S yang telah ditentukan
+       document.write ( "Diketahui Panjang Sisi sebuah bujur sangkar atau persegi " + S +"cm<br>");
+
+       // Menghitung luas persegi menggunakan pangkat 2 karena sisi x sisi sama saja dengan sisi pangkat 2
+       document.write ( "Maka Luas dari Persegi atau Bujur Sangkar yaitu " + (S**2) + "cm<br><br>");
+
+        // menentukan nilai awal dari alas dan tinggi segitiga
+       let A= 12;
+       let T= 15;
+       // nilai tetap untuk menghitung luas segitiga yaitu setengah atau 0.5
+       const LS= 0.5
+
+       // Judul Luas 
+       document.write ( "<h3>Luas Segitiga</h3><br><br>");
+
+       // Memanggil fungsi A dan T yang telah ditentukan
+       document.write ( "Diketahui Alas segitiga " + A +"cm <br>");
+       document.write ( "dan memiliki tinggi " + T + "cm <br>");
+       
+       // Menghitung Luas Segitiga 
+       document.write ( "Maka luas dari segitiga adalah " + (LS*A*T) + "cm<br><br>");
+
+    </script>
+</body>
+</html>
