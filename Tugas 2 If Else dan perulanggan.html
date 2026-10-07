@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //deklarasi data awal pegawai
+        let pegawai = "Dodi Prayodi";
+        let umur = 25;
+        let jabatan = "Manajer";
+        let status = "Menikah";
+        let GP= 0;
+        let TJ = 0;
+        let BPJS=0;
+        let TK= 0;
+        let TG=0;
+
+        //membuat logika if-else untuk menentukan gaji
+        if (jabatan==="Manajer"){
+            GP=15000000;
+            }
+        else if(jabatan==="Asisten Manajer"){
+            GP=10000000;
+            }
+        else if(jabatan==="Staff"){
+            GP=5000000;
+        }
+
+        //menghitung tunjangan jabatan pegawai
+        TJ = 0.15*GP;
+
+        //menghitung BPJS yang didapat pegawai
+        BPJS = 0.1*GP;
+
+        //menghitung tunjangan keluarga menggunakan operator ternary (ketika sudah menikah mendapat 20% dari gaji pokok, selain itu 0 )
+        TK=(status==="Menikah")?(0.2*GP):0;
+
+        //Menjumlah semua element gaji
+        TG = GP+TJ+BPJS+TK;
+
+        // menampilkan data pegawai menggunakan backtick (`)
+       document.write(`
+            <table border="1" cellpadding="8" cellspacing="1">
+                <thead>
+                    <tr>
+                        <th>Nama Pegawai</th>
+                        <th>Umur</th>
+                        <th>Jabatan</th>
+                        <th>Status</th>
+                        <th>Gaji Pokok</th>
+                        <th>Tunjangan Jabatan</th>
+                        <th>BPJS</th>
+                        <th>Tunjangan Keluarga</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>${pegawai}</td>
+                        <td>${umur}</td>
+                        <td>${jabatan}</td>
+                        <td>${status}</td>
+                        <td>Rp ${GP.toLocaleString()}</td>
+                        <td>Rp ${TJ.toLocaleString()}</td>
+                        <td>Rp ${BPJS.toLocaleString()}</td>
+                        <td>Rp ${TK.toLocaleString()}</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="7" style="text-align: right; font-weight: bold;">Total Keseluruhan Gaji:</td>
+                        <td style="font-weight: bold;">Rp ${TG.toLocaleString()}</td>
+                    </tr>
+                </tfoot>
+            </table>
+       ` );
+            
+    </script>
+    
+</body>
+</html>
